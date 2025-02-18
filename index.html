@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>じゃんけんアプリ</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap のためのJS (jQuery, Popper.js, Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>じゃんけんアプリ</h1>
+    <div id="scoreboard">勝ち: 0 | 負け: 0 | 引き分け: 0</div>
+    <p>
+        <button onclick="play('rock')" class="btn btn-primary">グー</button>
+        <button onclick="play('scissors')" class="btn btn-success">チョキ</button>
+        <button onclick="play('paper')" class="btn btn-warning">パー</button>
+        <button onclick="setCpuMode('weak')">弱いCPU</button>
+        <button onclick="setCpuMode('normal')">普通のCPU</button>
+        <button onclick="setCpuMode('strong')">強いCPU</button>
+    </p>
+
+    <h2>ボタンを押してください</h2>
+
+    <p>コンピューターの手</p>
+    <img id="computerChoiceImg" width="150" src="">
+
+    <p>あなたの手</p>
+    <img id="yourChoiceImg" width="150" src="">
+
+    <div id="history"></div>
+
+    <script src="./js/janken.js"></script>
+</body>
+</html>
